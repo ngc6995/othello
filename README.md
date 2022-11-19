@@ -55,5 +55,5 @@ SCORE_MATRIX = (( 99, -25, 10, 5, 5, 10, -25,  99,),
 To start the game run `main.py`.
 ### Modules used
 `Pygame` and `NumPy`
-### Screenshot
+### Screen shot
 ![Screen shot](screen_shot.png)
