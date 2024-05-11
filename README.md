@@ -41,7 +41,7 @@ def __alphabeta(self, node, depth, alpha, beta, maximizingPlayer):
                     break  # Alpha cut off
             return value, best_move
 ```
-The evaluation function is simple, just a 2d array to score earch cell.
+The evaluation function is simple, just a 2d array to score earch square.
 ```python
 # Calculate the score of a giving position
 SCORE_MATRIX = (( 99, -25, 10, 5, 5, 10, -25,  99,),
