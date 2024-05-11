@@ -7,10 +7,12 @@ def __alphabeta(self, node, depth, alpha, beta, maximizingPlayer):
 	if depth == 0 or self.__terminal(node):
             return self.__evaluation(node), None
         if maximizingPlayer:
-	    # Check player PASS
-            #max_player_moves = self.__get_legal_moves(node, self.__max_player)
-            #if len(max_player_moves) == 0:
-            #    return self.__alphabeta(node, depth-1, alpha, beta, not maximizingPlayer)
+	    """
+            Check player PASS
+            max_player_moves = self.__get_legal_moves(node, self.__max_player)
+            if len(max_player_moves) == 0:
+                return self.__alphabeta(node, depth-1, alpha, beta, not maximizingPlayer)
+	    """
             value = -self.INFINITY
             best_move = None
             for move in max_player_moves:
@@ -24,10 +26,12 @@ def __alphabeta(self, node, depth, alpha, beta, maximizingPlayer):
                     break  # Beta cut off
             return value, best_move
         else:
-	    # Check player PASS
-            #min_player_moves = self.__get_legal_moves(node, self.__min_player)
-            #if len(min_player_moves) == 0:
-            #    return self.__alphabeta(node, depth-1, alpha, beta, not maximizingPlayer)
+	    """
+	    Check player PASS
+            min_player_moves = self.__get_legal_moves(node, self.__min_player)
+            if len(min_player_moves) == 0:
+                return self.__alphabeta(node, depth-1, alpha, beta, not maximizingPlayer)
+	    """
             value = +self.INFINITY
             best_move = None
             for move in min_player_moves:
